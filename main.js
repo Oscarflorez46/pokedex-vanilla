@@ -69,7 +69,7 @@ function showPokemonDetail(pokemon){
     <ul class="abilities">${pokemonAbilities}</ul>
     <h3>Experiencia</h3>
     <p>${pokemon.base_experience}</p> 
-    <img src="${pokemon.sprites.front_shiny}" alt="${pokemon.name}"></img>
+    <img class= "image" src="${pokemon.sprites.front_shiny}" alt="${pokemon.name}"></img>
     <h3>Tipos de Pokemon</h3>
     <ul>
     ${pokemonTypes}
@@ -106,7 +106,7 @@ searchBtn.addEventListener("click",()=>searchPokemon())
 
 
 async function loadPokedex(){
-    for (let i=1;i<17;i++){
+    for (let i=1;i<2;i++){
         const pokemon = await fetchPokemonData(i)
     displayPokemon(pokemon)
     }
